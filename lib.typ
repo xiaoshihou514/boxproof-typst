@@ -64,52 +64,36 @@
   f(1).at(1)
 }
 
-// = Test
-//
-// #start(
-//   pf(
-//     ($forall x.A(x)$, [some reason]),
-//     ($exists x.A(x)$, [trust me]),
-//     pfbox(
-//       ($forall x.A(x)$, [some reason]),
-//       ($exists x.A(x)$, [trust me]),
-//     ),
-//     ($forall x.A(x)$, [some reason]),
-//     cases(
-//       pf(
-//         ($forall x.A(x)$, [some reason]),
-//         ($exists x.A(x)$, [trust me]),
-//       ),
-//       pf(
-//         ($forall x.A(x)$, [some reason]),
-//         ($exists x.A(x)$, [trust me]),
-//       ),
-//       pf(
-//         ($forall x.A(x)$, [some reason]),
-//         ($exists x.A(x)$, [trust me]),
-//       ),
-//     ),
-//     cases(
-//       pf(($forall x.A(x)$, [some reason])),
-//       pf(
-//         ($forall x.A(x)$, [some reason]),
-//         ($exists x.A(x)$, [trust me]),
-//         pfbox(
-//           ($forall x.A(x)$, [some reason]),
-//           ($exists x.A(x)$, [trust me]),
-//           cases(
-//             pf(
-//               ($forall x.A(x)$, [f]),
-//               ($exists x.A(x)$, [f]),
-//             ),
-//             pf(
-//               ($forall x.A(x)$, [f]),
-//               ($exists x.A(x)$, [f]),
-//             ),
-//           ),
-//           ($exists x.A(x)$, [f]),
-//         ),
-//       ),
-//     ),
-//   ),
-// )
+#let andi(l1, l2) = $and#h(0em)I(#l1, #l2)$
+#let impi(l1, l2) = $->#h(0em)I(#l1, #l2)$
+#let ori(l) = $or#h(0em)I(#l)$
+#let noti(l1, l2) = $not I(#l1, #l2)$
+#let dni(l) = $not not I(#l)$
+#let fi(l1, l2) = $bot I(#l1, #l2)$
+#let ti = $top I$
+#let iffi(l1, l2) = $<->#h(0em)I(#l1, #l2)$
+#let exi(l) = $exists I(#l)$
+#let fai(l1, l2) = $forall I(#l1, #l2)$
+
+#let ande(l) = $and#h(0em)E(#l)$
+#let impe(l1, l2) = $->#h(0em)E(#l1, #l2)$
+#let ore(l1, l2, l3, l4, l5) = $or#h(0em)E(#l1, #l2 - #l3, #l4 - #l5)$
+#let note(l1, l2) = $not E(#l1, #l2)$
+#let dne(l) = $not not E(#l)$
+#let fe(l) = $bot E(#l)$
+#let iffe(l1, l2) = $<->#h(0em)E(#l1, #l2)$
+#let exe(l1, l2, l3, l4) = $exists E(#l1, #l2, #l3, #l4)$
+#let fae(l) = $forall E(#l)$
+#let faie(l1, l2) = $forall #h(0em) -> #h(0em) E(#l1, #l2)$
+
+#let lem = [*LEM*]
+#let mt = [*MT*]
+#let pc = [*PC*]
+#let refl = [*refl*]
+#let eqsub(l1, l2) = [*=sub*(#l1, #l2)]
+#let symm(l) = [*sym*(#l)]
+#let fic = [$forall I$ *const*]
+#let given = [*given*]
+#let premise = [*premise*]
+#let ass = [*ass*]
+#let tick(l) = $#sym.checkmark (#l)$
