@@ -9,7 +9,7 @@
           grid(
             columns: (auto, auto, auto, 1fr),
             align: (left, left, left, right),
-            $counter$, h(2em), stmt, [\[#reason\]],
+            $counter$, h(5%), stmt, reason,
           ),
         )
         counter += 1
@@ -20,7 +20,7 @@
         counter = counter_
       }
     }
-    (counter, grid(rows: result.len(), inset: 2.5pt, align: top, ..result))
+    (counter, grid(rows: result.len(), inset: 2pt, align: top, ..result))
   }
 }
 
@@ -45,7 +45,7 @@
     for line in boxes.pos() {
       assert.eq(type(line), function)
       let (counter_, x) = line(counter)
-      result.push(align(center + horizon, x))
+      result.push(align(left + top, x))
       counter = counter_
     }
 
