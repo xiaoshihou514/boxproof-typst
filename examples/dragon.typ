@@ -1,4 +1,5 @@
-#import "@preview/boxproof:0.1.0": *
+// #import "@preview/boxproof:0.1.0": *
+#import "../lib.typ": *
 
 #start(
   pf(
