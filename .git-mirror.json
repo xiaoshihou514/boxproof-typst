@@ -4,11 +4,19 @@
     "url": "ssh://git@codeberg.org/xiaoshihou/boxproof-typst.git"
   },
   {
+    "name": "disroot",
+    "url": "ssh://git@git.disroot.org/xiaoshihou/boxproof-typst.git"
+  },
+  {
     "name": "sourcehut",
     "url": "git@git.sr.ht:~xiaoshihou/boxproof-typst"
   },
   {
     "name": "gitlab",
     "url": "git@gitlab.com:xiaoshihou/boxproof-typst.git"
+  },
+  {
+    "name": "gitgud",
+    "url": "git@gitgud.io:xiaoshihou514/boxproof-typst.git"
   }
 ]
